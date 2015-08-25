@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+ - 1.9.3
+ - 2.1.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: O4vHRY7yoWgWpcp+dTqFwVjGSjeYnGDFbRbvgfjxbSWxIGhtD3HbuUm62ncb83IIr7eCTqIQkYXGsndvsd5k3m4xJhJA8rkxPWri/B+ZdOqwSChov65Raf1I+gUW/ZAgfyMvFBlNB4jEPFe46eL/2N1AQtLDeq1ZdJaUwYC2dew=
+  gem: s3rsync
+  on:
+    all_branches: true
+    tags: true
+    repo: idevops/s3rsync
