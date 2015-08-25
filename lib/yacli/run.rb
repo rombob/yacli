@@ -5,8 +5,9 @@ require "erb"
 module Yacli
   class Run < Base
   
-    def initialize(opt)
-      @log = init_logger(opt['log-path'])
+    def initialize(opt = {})
+      log_path = !opt['log-path'].nil? ? opt['log-path'] : nil
+      @log = init_logger(log_path)
       @log.debug "opt: #{opt.inspect}"
     end
   

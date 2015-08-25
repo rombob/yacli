@@ -13,7 +13,7 @@ module Yacli
     
     def error_exit(msg, exit_code = 1)
       @log.error msg
-      exit exit_code
+      raise ExecutionError
     end
     
     def pass_cli(cmd, valid_out_pattern = nil)
@@ -27,8 +27,9 @@ module Yacli
       valid_content = valid_out_pattern.nil? ? true : !cmd_out.match(/#{valid_out_pattern}/).nil?
       @log.debug "valid_content: #{valid_content}"
       
-      error_exit "Not successful execution or not valid_content! out: #{cmd_out}" if (!success_exec || !valid_content)
-      cmd_out
+      raise InvalidExitCodeError.new(cmd_out) if !success_exec
+      raise InvalidContentError.new(cmd_out) if !valid_content
+      { :success => success_exec, :output => cmd_out }
     end
   end
 end

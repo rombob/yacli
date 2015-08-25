@@ -1,13 +1,13 @@
 language: ruby
 rvm:
- - 1.9.3
- - 2.1.2
+- 1.9.3
+- 2.1.5
 deploy:
   provider: rubygems
   api_key:
-    secure: O4vHRY7yoWgWpcp+dTqFwVjGSjeYnGDFbRbvgfjxbSWxIGhtD3HbuUm62ncb83IIr7eCTqIQkYXGsndvsd5k3m4xJhJA8rkxPWri/B+ZdOqwSChov65Raf1I+gUW/ZAgfyMvFBlNB4jEPFe46eL/2N1AQtLDeq1ZdJaUwYC2dew=
-  gem: s3rsync
+    secure: FWnp95y7k+XMsgwPfNaB4eDQtGnX0aIPzuCWAGIgNqec8mK9d/139wSGuvKX8hFqb/Wq9IwLobRYrFV5ReQvhbXW59YMWPaM1NEZdFNdED5jVozdgHK6//O13CI37rFYF2kBwR9yuwstwOJAVWlluPZn2dQzp8d/B6lnlgrxSnOO3o90zwlWARnKXY91XvPlVu0ertoFTa3m6nFGMW6revseW7oh7WaUph6o5S8nsZ9LzhCMfAElOwYoERkt1KhlZ/p93RCgReyj4stDEhhem38Vm5PejGpnlgOkHvSXmXT2EfM/Z6FtWvFwpRGn8XwDIrwt2A05taGbkB80jTxnuRCRhDUuBxBVg3ZfWqblcqMco//gGxDm4ZxwtF/iP3MwAsEnvDO2MVOnlXdeRTWW2HwgVvW7hUeEQDX1yPBXJ9jRbGWw31zg8D75KeO5iWrabfM938kjK41mmSkWWVHTtYI82TjkeGoWoFQJzR8ETS4i/zP9ezZVI+F7nmwNbViilntUJPAaGEjaXgPXLUjCHAuRacleHUm7BC+PFVWnCm+V8iRIpmv3U+fwDzEKKj1TTKZb662d9PIaqP6jliuXYPqgSv1KCbT5uz5k6T9kgUu+wlbphsYC0tiilT9r4NgewpHQT4Q6FlReQj9r+0XQgXaPQr+hHIP9N10dx5n/POc=
+  gem: yacli
   on:
     all_branches: true
     tags: true
-    repo: idevops/s3rsync
+    repo: rombob/yacli
