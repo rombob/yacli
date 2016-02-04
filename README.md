@@ -3,11 +3,12 @@ yacli
 [![Gem Version](http://img.shields.io/gem/v/yacli.svg)][gem]
 [![Build Status](http://img.shields.io/travis/rombob/yacli.svg)][travis]
 [![Coverage Status](https://img.shields.io/coveralls/rombob/yacli.svg)][coveralls]
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/dc6b761f73aa423ba610746d19f8597c)][codacy]
 
 [gem]: https://rubygems.org/gems/yacli
 [travis]: http://travis-ci.org/rombob/yacli
 [coveralls]: https://coveralls.io/r/rombob/yacli
-
+[codacy]: https://www.codacy.com/app/github_50/yacli
 
 Prerequisites
 -------------
