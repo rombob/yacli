@@ -11,7 +11,7 @@ module Yacli
       logger
     end
     
-    def error_exit(msg, exit_code = 1)
+    def error_exit(msg)
       @log.error msg
       raise ExecutionError
     end
