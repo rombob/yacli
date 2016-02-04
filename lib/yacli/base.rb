@@ -27,8 +27,8 @@ module Yacli
       valid_content = valid_out_pattern.nil? ? true : !cmd_out.match(/#{valid_out_pattern}/).nil?
       @log.debug "valid_content: #{valid_content}"
       
-      raise InvalidExitCodeError.new(cmd_out) if !success_exec
-      raise InvalidContentError.new(cmd_out) if !valid_content
+      raise InvalidExitCodeError.new(cmd_out) unless success_exec
+      raise InvalidContentError.new(cmd_out) unless valid_content
       { :success => success_exec, :output => cmd_out }
     end
   end
