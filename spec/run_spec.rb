@@ -7,7 +7,7 @@ describe Yacli::Run do
   context 'run is successfull' do
     let(:opt) {
       {
-        'cmd'        => 'date',
+        'cmd'         => 'date',
         'dry-run'     => false,
       }
     }
@@ -15,18 +15,6 @@ describe Yacli::Run do
     
     before do
       allow_any_instance_of(Yacli::Run).to receive(:pass_cli).and_return(nil)
-    end
-    
-    after do
-      #
-    end
-    
-    before(:each) do
-      #Helpers::pre_run_helper
-    end
-    
-    after(:each) do
-      # Nothing
     end
     
     it "print date" do
