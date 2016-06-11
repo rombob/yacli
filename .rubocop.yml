@@ -1,0 +1,38 @@
+Style/MutableConstant:
+  Enabled: false
+  
+Documentation:
+    Enabled: false
+
+Metrics/LineLength:
+  Max: 225
+  
+Metrics/MethodLength:
+  Max: 100
+
+Metrics/AbcSize:
+  Max: 50
+
+SpecialGlobalVars:
+  Enabled: false
+
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+  
+Style/TrailingCommaInLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+AllCops:
+  TargetRubyVersion: 2.2
+  UseCache: true
+  Include:
+    - '**/Gemfile*'
+    - '**/Rakefile*'
+    - '**/*.rake'
+    - '**/*.rb'
+  Exclude:
+    - 'gems/**/*'
+    - '**/*.lock'
+    - '**/gems/**/*'
