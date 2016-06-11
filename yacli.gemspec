@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bump"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "growl"
-  spec.add_development_dependency "guard", "2.13.0"
-  spec.add_development_dependency "guard-rspec"
+  #spec.add_development_dependency "guard", "2.13.0"
+  #spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "coveralls"
 end
