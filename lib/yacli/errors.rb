@@ -8,7 +8,7 @@ module Yacli
       end
     end
 
-    alias_method :message, :to_s
+    alias message to_s
   end
 
   class ExecutionError < YacliError; status_code(2); end

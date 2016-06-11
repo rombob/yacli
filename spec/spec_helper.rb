@@ -1,7 +1,7 @@
-require "simplecov"
-require "coveralls"
-require "yacli"
-require "yacli/base"
+require 'simplecov'
+require 'coveralls'
+require 'yacli'
+require 'yacli/base'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter,
@@ -14,5 +14,4 @@ SimpleCov.start do
 end
 
 module Helpers
-  
 end
