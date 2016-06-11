@@ -1,4 +1,18 @@
 #!/usr/bin/env ruby
+require 'bundler/setup'
 
+puts "INFO: Running using ruby version: #{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}"
+
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
 require 'yacli/cli'
-Yacli::Run.go
+begin
+  result = Yacli::Cli.start
+  puts "result: #{result}"
+rescue StandardError => e
+  puts "ERROR: #{e}"
+  puts "ERROR: #{e.backtrace.join("\n")}"
+
+  exit 1
+end
+
+exit result == 0 ? 0 : 1

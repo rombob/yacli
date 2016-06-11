@@ -11,8 +11,8 @@ module Yacli
     method_option :cmd, aliases: '-c', default: 'uname'
     def cli
       require 'yacli/base'
-      b = Base.new(options)
-      exit b.cli(options)
+      b = Base.new
+      b.cli(options)
     end
   end
 end
