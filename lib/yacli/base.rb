@@ -31,6 +31,10 @@ module Yacli
       @log.debug "@opt: #{@opt.inspect}"
     end
 
+    def log(msg, level = :info)
+      @log.send(level, msg)
+    end
+
     def error_exit(msg)
       @log.error msg
       raise ExecutionError
@@ -55,7 +59,9 @@ module Yacli
 
       raise InvalidExitCodeError, cmd_out unless success_exec
       raise InvalidContentError, cmd_out unless valid_content
-      { success: success_exec, output: cmd_out }
+      result = { success: success_exec, output: cmd_out, exit_code: exit_code.to_i }
+      @log.debug "run result: #{result.inspect}"
+      result
     end
 
     def cli(opts = {})
@@ -91,8 +97,9 @@ module Yacli
 
       raise InvalidExitCodeError, cmd_out unless success_exec
       raise InvalidContentError, cmd_out unless valid_content
-      @log.debug "run result: #{{ success: success_exec, output: cmd_out }}"
-      exit_code
+      result = { success: success_exec, output: cmd_out, exit_code: exit_code.to_i }
+      @log.debug "run result: #{result.inspect}"
+      result
     end
   end
 end
