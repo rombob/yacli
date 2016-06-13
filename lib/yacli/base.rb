@@ -26,8 +26,8 @@ module Yacli
       logger
     end
 
-    def self.options
-      Trollop.options
+    def self.options(&block)
+      Trollop.options(&block)
     end
 
     def initialize(opt = {})
