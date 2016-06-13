@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "thor", "0.19.1"
+  spec.add_dependency "trollop", "2.1.2"
   
   spec.add_development_dependency "rspec_junit_formatter", '0.2.3'
   spec.add_development_dependency "simplecov", "0.10.0"

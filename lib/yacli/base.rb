@@ -1,6 +1,7 @@
 require 'logger'
 require 'socket'
 require 'open3'
+require 'trollop'
 
 module ToBoolean
   def to_bool
@@ -23,6 +24,10 @@ module Yacli
       logger.level = !ENV['DEBUG'].nil? ? Logger::DEBUG : Logger::INFO
       logger.debug "logger.level: #{logger.level}"
       logger
+    end
+
+    def self.options
+      Trollop.options
     end
 
     def initialize(opt = {})

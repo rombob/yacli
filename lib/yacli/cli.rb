@@ -13,8 +13,8 @@ module Yacli
       require 'yacli/base'
       b = Base.new
       b.cli(options)
-      #b.log("I'm logging")
-      #b.log("I'm logging error", :error)
+      # b.log("I'm logging")
+      # b.log("I'm logging error", :error)
     end
   end
 end
