@@ -22,9 +22,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency "trollop", "~> 2.1"
   
   spec.add_development_dependency "rspec_junit_formatter", "~> 0.2"
-  spec.add_development_dependency "simplecov", "0.10.0"
+  spec.add_development_dependency "simplecov", "~> 0.12"
   spec.add_development_dependency "bundler", "~> 1.7"
-  spec.add_development_dependency "rubocop", "0.40.0"
+  spec.add_development_dependency "rubocop", "~> 0.47"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "bump"
   spec.add_development_dependency "rspec", "~> 3.0"
