@@ -1,7 +1,7 @@
 require 'logger'
 require 'socket'
 require 'open3'
-require 'trollop'
+require 'optimist'
 
 module ToBoolean
   def to_bool
