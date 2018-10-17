@@ -27,7 +27,7 @@ module Yacli
     end
 
     def self.options(&block)
-      Trollop.options(&block)
+      Optimist.options(&block)
     end
 
     def initialize(opt = {})

@@ -1,20 +1,15 @@
-require 'thor'
-
 module Yacli
-  class Cli < Thor
-    def self.common_opts
-      method_option :'dry-run', aliases: '-d', type: :boolean, default: false
-    end
-
-    desc 'cli', 'run cli'
-    common_opts
-    method_option :cmd, aliases: '-c', default: 'uname'
-    def cli
+  class Cli
+    def self.start
       require 'yacli/base'
       b = Base.new
-      b.cli(options)
-      # b.log("I'm logging")
-      # b.log("I'm logging error", :error)
+      options = Base.options do
+        opt :cmd, "Number of limbs", :default => 'uname', :type => :string
+      end
+      b.log("running CLI with options: #{options.inspect}")
+      result = b.cli(options)
+      b.log("result: #{result.inspect}")
+      #b.log("I'm logging error", :error)
     end
   end
 end

@@ -3,7 +3,7 @@ Yacli
 
 [![Gem Version](http://img.shields.io/gem/v/yacli.svg)][gem]
 [![Build Status](http://img.shields.io/travis/rombob/yacli.svg)][travis]
-[![Code Climate](http://img.shields.io/codeclimate/github/rombob/yacli.svg)][codeclimate]
+<!-- [![Code Climate](http://img.shields.io/codeclimate/github/rombob/yacli.svg)][codeclimate] -->
 [![Coverage Status](https://img.shields.io/coveralls/rombob/yacli.svg)][coveralls]
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/dc6b761f73aa423ba610746d19f8597c)][codacy]
 
@@ -15,14 +15,14 @@ Yacli
 Description
 -----------
 Yacli a.k.a yet another CLI, is a simple gem allowing to build custom CLI wrappers.
-It uses [Thor][thor] as a CLI option manager as well as additional minimal helpers for logging and output handling.
+It uses [Optimist][optimist] as a CLI option manager as well as additional minimal helpers for logging and output handling.
 
 Please note: Yacli, by design, is a system tool created to allow seamless file and url
 access, which should not receive application user input. It relies on [open-uri][open-uri],
 which combined with application user input would provide a command injection attack
 vector.
 
-[thor]: https://github.com/ruby/rake
+[optimist]: https://github.com/ManageIQ/optimist
 [open-uri]: https://ruby-doc.org/stdlib-2.5.1/libdoc/open-uri/rdoc/index.html
 
 Prerequisites
